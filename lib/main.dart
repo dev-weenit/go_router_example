@@ -1,12 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 import 'package:routingv2/models/category.dart';
 import 'package:routingv2/models/item.dart';
 import 'package:routingv2/models/shop.dart';
 import 'package:routingv2/router.dart';
+
+import 'url_strategy_stub.dart'
+    if (dart.library.html) 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 const int maxShops = 2;
 const int maxCategories = 2;
@@ -28,7 +30,7 @@ final items = List.generate(
 class MainList {}
 
 void main() {
-  setUrlStrategy(PathUrlStrategy());
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 
