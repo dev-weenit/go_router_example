@@ -18,3 +18,15 @@ To use
     - Main list 2  
   - Screen 2
   - Screen 3
+
+
+
+## Learnings
+1. The root route of the ShellRoute can't have parentNavigation key
+
+>  route.parentNavigatorKey == null || route.parentNavigatorKey == navigatorKey
+> "sub-route's parent navigator key must either be null or has the same navigator key as parent's key"
+
+2. go vs push
+go: builds all the sub-routes
+push: pushes the page on top of current stack without changing url
