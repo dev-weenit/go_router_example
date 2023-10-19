@@ -1,5 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:routingv2/main.dart';
+import 'package:routingv2/pages/category_page.dart';
+import 'package:routingv2/pages/error_page.dart';
+import 'package:routingv2/pages/item_page.dart';
+import 'package:routingv2/pages/shop_page.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: '/shops',
@@ -45,7 +48,4 @@ final GoRouter router = GoRouter(
   errorBuilder: (context, state) => ErrorPage(
     location: state.uri.toString(),
   ),
-  // onException: (_, GoRouterState state, GoRouter router) {
-  //   router.go('/404', extra: state.uri.toString());
-  // },
 );
